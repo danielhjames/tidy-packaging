@@ -1,5 +1,12 @@
+tidy (20160404-1) unstable; urgency=low
+
+  * Test rebuild with modern packaging standards
+
+ -- Daniel James <daniel@64studio.com>  Thu, 05 May 2016 12:33:07 +0100
+
 tidy (20091223cvs-1.5) unstable; urgency=high
 
+  * Non-maintainer upload.
   [ Alessandro Ghedini ]
   * Fix heap buffer overflow and memory saturation on invalid HTML input
     as per CVE-2015-5522 and CVE-2015-5523 (Closes: #792571)
