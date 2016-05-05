@@ -1,0 +1,27 @@
+diff -Naur tidy-cvs20080116.orig/include/platform.h tidy-cvs20080116/include/platform.h
+--- tidy-cvs20080116.orig/include/platform.h	2007-02-11 20:45:52.000000000 +1100
++++ tidy-cvs20080116/include/platform.h	2008-01-16 13:29:23.000000000 +1100
+@@ -26,6 +26,7 @@
+ /* #define TIDY_CONFIG_FILE "/etc/tidy_config.txt" */ /* original */
+ /* #define TIDY_CONFIG_FILE "/etc/tidyrc" */
+ /* #define TIDY_CONFIG_FILE "/etc/tidy.conf" */
++#define TIDY_CONFIG_FILE "/etc/tidy.conf"
+ 
+ /*
+   Uncomment the following #define if you are on a system
+@@ -34,6 +35,7 @@
+   the HTML_TIDY environment variable is not set.
+ */
+ /* #define TIDY_USER_CONFIG_FILE "~/.tidyrc" */
++#define TIDY_USER_CONFIG_FILE "~/.tidyrc"
+ 
+ /*
+   Uncomment the following #define if your
+@@ -49,6 +51,7 @@
+ */
+ 
+ /* #define SUPPORT_GETPWNAM */
++#define SUPPORT_GETPWNAM
+ 
+ 
+ /* Enable/disable support for Big5 and Shift_JIS character encodings */

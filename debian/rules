@@ -1,0 +1,29 @@
+#! /usr/bin/make -f
+
+export AUTOMAKE=automake --foreign
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/autoreconf.mk
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+
+
+DOCDIR=htmldoc
+HELPXML=$(DOCDIR)/tidy-help.xml
+CONFIGXML=$(DOCDIR)/tidy-config.xml
+MANXSL=$(DOCDIR)/tidy1.xsl
+MANPAGE=debian/tidy.1
+
+build/tidy::
+	## Generate manpage from tidy output
+	LD_LIBRARY_PATH=$${LD_LIBRARY_PATH:+$$LD_LIBRARY_PATH:}$(CURDIR)/src/.libs/ \
+		$(CURDIR)/console/tidy -xml-help > $(HELPXML)
+	LD_LIBRARY_PATH=$${LD_LIBRARY_PATH:+$$LD_LIBRARY_PATH:}$(CURDIR)/src/.libs/ \
+		$(CURDIR)/console/tidy -xml-config > $(CONFIGXML)
+	/usr/bin/xsltproc -o $(MANPAGE) $(MANXSL) $(HELPXML)
+
+clean::
+	## Clean up generated files
+	rm -f $(MANPAGE)
+	rm -f $(HELPXML)
+	rm -f $(CONFIGXML)
