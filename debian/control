@@ -2,14 +2,13 @@ Source: tidy
 Section: web
 Priority: optional
 Maintainer: Daniel James <daniel@64studio.com>
-Build-Depends: debhelper (>= 7), libtool, perl, dh-autoreconf, cmake
+Build-Depends: debhelper (>= 9), libtool, perl, dh-autoreconf, cmake
 Standards-Version: 3.9.8
 Homepage: http://www.html-tidy.org/
 
 Package: tidy
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, libtidy-0.99-0 (>= ${binary:Version})
-Suggests: tidy-doc
 Description: HTML syntax checker and reformatter
  Corrects markup in a way compliant with the latest standards, and
  optimal for the popular browsers.  It has a comprehensive knowledge
