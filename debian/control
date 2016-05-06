@@ -67,23 +67,3 @@ Description: HTML syntax checker and reformatter - development
  .
  Tidy is a product of the World Wide Web Consortium. This is the development
  package.
-
-Package: tidy-dbgsym
-Section: debug
-Architecture: any
-Depends: libtidy-0.99-0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
-Description: HTML syntax checker and reformatter - development
- Corrects markup in a way compliant with the latest standards, and
- optimal for the popular browsers.  It has a comprehensive knowledge
- of the attributes defined in the HTML 4.0 recommendation from W3C,
- and understands the US ASCII, ISO Latin-1, UTF-8 and the ISO 2022
- family of 7-bit encodings.  In the output:
- .
-  * HTML entity names for characters are used when appropriate.
-  * Missing attribute quotes are added, and mismatched quotes found.
-  * Tags lacking a terminating '>' are spotted.
-  * Proprietary elements are recognized and reported as such.
-  * The page is reformatted, from a choice of indentation styles.
- .
- Tidy is a product of the World Wide Web Consortium. This is the debug symbols
- package.
