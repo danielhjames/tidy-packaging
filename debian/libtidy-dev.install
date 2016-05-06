@@ -1,2 +1,2 @@
-debian/usr/share/doc/tidy/changelog.gz /usr/share/doc/libtidy-dev/
+debian/usr/share/doc/tidy/changelog /usr/share/doc/libtidy-dev/
 debian/tmp/usr/include/* usr/include/tidy
