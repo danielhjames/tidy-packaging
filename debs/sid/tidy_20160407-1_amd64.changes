@@ -1,0 +1,44 @@
+Format: 1.8
+Date: Thu, 05 May 2016 12:33:07 +0100
+Source: tidy
+Binary: tidy libtidy-0.99-0 libtidy-dev
+Architecture: source amd64
+Version: 20160407-1
+Distribution: unstable
+Urgency: low
+Maintainer: Daniel James <daniel@64studio.com>
+Changed-By: Daniel James <daniel@64studio.com>
+Description:
+ libtidy-0.99-0 - HTML syntax checker and reformatter - library
+ libtidy-dev - HTML syntax checker and reformatter - development
+ tidy       - HTML syntax checker and reformatter
+Closes: 655200 810951
+Changes:
+ tidy (20160407-1) unstable; urgency=low
+ .
+   * New upstream release 5.2.0 (Closes: #655200, Closes: #810951)
+   * Update for modern packaging standards
+Checksums-Sha1:
+ 03cbca85ac1980e5da71b3a01943275ccfd03279 965 tidy_20160407-1.dsc
+ bd5d72eabb52580fcd14ce50000f1432a4d56ca1 529001 tidy_20160407.orig.tar.gz
+ 30671c1edfa32c60645e5cb0bba8c81a3aa3ba3f 28684 tidy_20160407-1.debian.tar.xz
+ bdee6a8b87ed51eb1959eee700d004e958935ae6 20396 libtidy-0.99-0_20160407-1_amd64.deb
+ 6e330f3415fdc5021f2376aa7f1b7682138af41f 39578 libtidy-dev_20160407-1_amd64.deb
+ 5e77aa434480c5296fae8215d2088ef3e8290ebd 338820 tidy-dbgsym_20160407-1_amd64.deb
+ 2fe942ef7263b9fd670be342ddc9331494d2972a 182672 tidy_20160407-1_amd64.deb
+Checksums-Sha256:
+ f01fff6da60d407eb1d0a866b435850ccd07230371e247f414aeb34ae122adbd 965 tidy_20160407-1.dsc
+ f807d816c47d6ce59dd91baec0b034bba257a85898f2cc3f6d94ce02b616f645 529001 tidy_20160407.orig.tar.gz
+ 0d37766e4dc80ca02c3262c2fb341a9d1a3de50146b71bc7d70fc499c9642fc3 28684 tidy_20160407-1.debian.tar.xz
+ 3ee5065c514a620d79449f2b03cd5fa7905a06c1fd79f433190e27140ad31de0 20396 libtidy-0.99-0_20160407-1_amd64.deb
+ d397874e860d63692f00bd03342b1d923b6cedc27c044b89c1fe5ea3c988d576 39578 libtidy-dev_20160407-1_amd64.deb
+ 44644ecc3dd499f13665bbcb9b9dc604d751952915e1158f3daa109318310be8 338820 tidy-dbgsym_20160407-1_amd64.deb
+ 29b736cf78f9cfb997569aba550a281d0bfe5eee7b2a31807a82d3f34d92ea92 182672 tidy_20160407-1_amd64.deb
+Files:
+ 755b1edc5235ca9f19781e73b7035eeb 965 web optional tidy_20160407-1.dsc
+ 8fb8e8b46f791ded83531164755da212 529001 web optional tidy_20160407.orig.tar.gz
+ 34e8706339a0f819a11fe2de86f3b701 28684 web optional tidy_20160407-1.debian.tar.xz
+ 786b39fd281eda6fd2f8f79021161e96 20396 libs optional libtidy-0.99-0_20160407-1_amd64.deb
+ 9bdf877e3a2a408ff5e3b172e9d0d58c 39578 libdevel optional libtidy-dev_20160407-1_amd64.deb
+ ba8213e94115f2e29cd8a190a4dfe744 338820 debug extra tidy-dbgsym_20160407-1_amd64.deb
+ f44bc982ffe444cd38f2349ba841be6a 182672 web optional tidy_20160407-1_amd64.deb
