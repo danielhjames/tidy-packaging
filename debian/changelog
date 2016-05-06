@@ -1,7 +1,6 @@
 tidy (20160407-1) unstable; urgency=low
 
-  * Non-maintainer upload.
-  * New upstream release 5.2.0 (Closes #655200, #810951)
+  * New upstream release 5.2.0 (Closes: #655200, Closes: #810951)
   * Update for modern packaging standards
 
  -- Daniel James <daniel@64studio.com>  Thu, 05 May 2016 12:33:07 +0100
