@@ -1,4 +1,4 @@
-tidy (20160407-1) unstable; urgency=low
+tidy (1:5.2.0-1) unstable; urgency=low
 
   * New upstream release 5.2.0 (Closes: #655200, Closes: #810951)
   * Update for modern packaging standards
