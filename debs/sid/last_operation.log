@@ -1,6 +1,6 @@
 I: using fakeroot in build.
-I: Current time: Tue May 17 13:00:12 BST 2016
-I: pbuilder-time-stamp: 1463486412
+I: Current time: Tue May 17 14:26:53 BST 2016
+I: pbuilder-time-stamp: 1463491613
 I: Building the build Environment
 I: extracting base tarball [/home/daniel/pbuilder/sid-base.tgz]
 I: creating local configuration
@@ -666,7 +666,7 @@ dpkg-genchanges: warning: package libtidy5-dbgsym listed in files list but not i
 dpkg-genchanges: info: including full source code in upload
  dpkg-source --after-build tidy-html5-5.2.0
 dpkg-buildpackage: info: full upload (original source is included)
-I: user script /var/cache/pbuilder/build//30218/tmp/hooks/B90lintian starting
+I: user script /var/cache/pbuilder/build//11022/tmp/hooks/B90lintian starting
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -849,21 +849,23 @@ Setting up patchutils (0.3.4-1) ...
 Setting up t1utils (1.39-2) ...
 Setting up lintian (2.5.44) ...
 +++ lintian output +++
+N: At least one of these is a correct non-English word
+O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 ment meant
+N: At least one of these is a correct non-English word
+O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 langage language
+I: libtidy5: possible-documentation-but-no-doc-base-registration
 I: libtidy-dev: possible-documentation-but-no-doc-base-registration
 N: At least one of these is a correct non-English word
 O: tidy: spelling-error-in-binary usr/bin/tidy ment meant
 N: At least one of these is a correct non-English word
 O: tidy: spelling-error-in-binary usr/bin/tidy langage language
 I: tidy: possible-documentation-but-no-doc-base-registration
-I: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 ment meant
-I: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 langage language
-I: libtidy5: possible-documentation-but-no-doc-base-registration
 +++ end of lintian output +++
-I: user script /var/cache/pbuilder/build//30218/tmp/hooks/B90lintian finished
+I: user script /var/cache/pbuilder/build//11022/tmp/hooks/B90lintian finished
 I: Copying back the cached apt archive contents
 I: unmounting dev/pts filesystem
 I: unmounting proc filesystem
 I: cleaning the build env 
-I: removing directory /var/cache/pbuilder/build//30218 and its subdirectories
-I: Current time: Tue May 17 13:05:09 BST 2016
-I: pbuilder-time-stamp: 1463486709
+I: removing directory /var/cache/pbuilder/build//11022 and its subdirectories
+I: Current time: Tue May 17 14:31:54 BST 2016
+I: pbuilder-time-stamp: 1463491914
