@@ -1,6 +1,7 @@
 tidy-html5 (1:5.2.0-1) unstable; urgency=low
 
   * New upstream release 5.2.0 (Closes: #655200, Closes: #810951)
+  * debian/control: changed libtidy-0.99-0 to libtidy5
   * Update for modern packaging standards
 
  -- Daniel James <daniel@64studio.com>  Thu, 05 May 2016 12:33:07 +0100

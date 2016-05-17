@@ -9,7 +9,7 @@ Homepage: http://www.html-tidy.org/
 Package: tidy
 Architecture: any
 Pre-Depends: dpkg (>= 1.15.6~)
-Depends: ${misc:Depends}, ${shlibs:Depends}, libtidy-0.99-0 (>= ${binary:Version})
+Depends: ${misc:Depends}, ${shlibs:Depends}, libtidy5 (>= ${binary:Version})
 Description: HTML syntax checker and reformatter
  Corrects markup in a way compliant with the latest standards, and
  optimal for the popular browsers.  It has a comprehensive knowledge
@@ -25,12 +25,12 @@ Description: HTML syntax checker and reformatter
  .
  Tidy is a product of the World Wide Web Consortium.
 
-Package: libtidy-0.99-0
+Package: libtidy5
 Section: libs
 Architecture: any
 Pre-Depends: dpkg (>= 1.15.6~)
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Conflicts: libtidy0
+Replaces: libtidy-0.99-0, libtidy0
 Description: HTML syntax checker and reformatter - library
  Corrects markup in a way compliant with the latest standards, and
  optimal for the popular browsers.  It has a comprehensive knowledge
@@ -51,7 +51,7 @@ Package: libtidy-dev
 Section: libdevel
 Architecture: any
 Pre-Depends: dpkg (>= 1.15.6~)
-Depends: libtidy-0.99-0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: libtidy5 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: HTML syntax checker and reformatter - development
  Corrects markup in a way compliant with the latest standards, and
  optimal for the popular browsers.  It has a comprehensive knowledge
