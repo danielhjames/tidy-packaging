@@ -1,6 +1,6 @@
 I: using fakeroot in build.
-I: Current time: Fri May 20 14:15:03 BST 2016
-I: pbuilder-time-stamp: 1463750103
+I: Current time: Fri May 20 14:54:15 BST 2016
+I: pbuilder-time-stamp: 1463752455
 I: Building the build Environment
 I: extracting base tarball [/home/daniel/pbuilder/sid-base.tgz]
 I: creating local configuration
@@ -670,7 +670,7 @@ dpkg-genchanges: warning: package libtidy5-dbgsym listed in files list but not i
 dpkg-genchanges: info: including full source code in upload
  dpkg-source --after-build tidy-html5-5.2.0
 dpkg-buildpackage: info: full upload (original source is included)
-I: user script /var/cache/pbuilder/build//32181/tmp/hooks/B90lintian starting
+I: user script /var/cache/pbuilder/build//28333/tmp/hooks/B90lintian starting
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -854,18 +854,18 @@ Setting up t1utils (1.39-2) ...
 Setting up lintian (2.5.44) ...
 +++ lintian output +++
 I: tidy: possible-documentation-but-no-doc-base-registration
+I: libtidy-dev: possible-documentation-but-no-doc-base-registration
 N: At least one of these is a correct non-English word
 O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 ment meant
 N: At least one of these is a correct non-English word
 O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 langage language
 I: libtidy5: possible-documentation-but-no-doc-base-registration
-I: libtidy-dev: possible-documentation-but-no-doc-base-registration
 +++ end of lintian output +++
-I: user script /var/cache/pbuilder/build//32181/tmp/hooks/B90lintian finished
+I: user script /var/cache/pbuilder/build//28333/tmp/hooks/B90lintian finished
 I: Copying back the cached apt archive contents
 I: unmounting dev/pts filesystem
 I: unmounting proc filesystem
 I: cleaning the build env 
-I: removing directory /var/cache/pbuilder/build//32181 and its subdirectories
-I: Current time: Fri May 20 14:20:00 BST 2016
-I: pbuilder-time-stamp: 1463750400
+I: removing directory /var/cache/pbuilder/build//28333 and its subdirectories
+I: Current time: Fri May 20 14:59:18 BST 2016
+I: pbuilder-time-stamp: 1463752758

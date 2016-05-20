@@ -1,6 +1,6 @@
 I: using fakeroot in build.
-I: Current time: Fri May 20 14:24:24 BST 2016
-I: pbuilder-time-stamp: 1463750664
+I: Current time: Fri May 20 15:00:21 BST 2016
+I: pbuilder-time-stamp: 1463752821
 I: Building the build Environment
 I: extracting base tarball [/home/daniel/pbuilder/jessie-base.tgz]
 I: creating local configuration
@@ -62,7 +62,7 @@ The following NEW packages will be installed:
 Need to get 30.8 kB/18.7 MB of archives. After unpacking 61.3 MB will be used.
 Writing extended state information...
 Get: 1 http://ftp.debian.org/debian/ jessie/main intltool-debian all 0.35.0+20060710.1 [30.8 kB]
-Fetched 30.8 kB in 0s (365 kB/s)
+Fetched 30.8 kB in 0s (377 kB/s)
 debconf: delaying package configuration, since apt-utils is not installed
 Selecting previously unselected package libpipeline1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 12042 files and directories currently installed.)
@@ -681,7 +681,7 @@ dpkg-deb: building package `libtidy-dev' in `../libtidy-dev_5.2.0-1_amd64.deb'.
 dpkg-genchanges: including full source code in upload
  dpkg-source --after-build tidy-html5-5.2.0
 dpkg-buildpackage: full upload (original source is included)
-I: user script /var/cache/pbuilder/build//21855/tmp/hooks/B90lintian starting
+I: user script /var/cache/pbuilder/build//18029/tmp/hooks/B90lintian starting
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -839,23 +839,22 @@ Setting up lintian (2.5.30+deb8u4) ...
 +++ lintian output +++
 W: tidy-html5 source: newer-standards-version 3.9.8 (current is 3.9.6)
 I: libtidy-dev: possible-documentation-but-no-doc-base-registration
-N: At least one of these is a correct non-English word
-O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 ment meant
-N: At least one of these is a correct non-English word
-O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 langage language
-I: libtidy5: possible-documentation-but-no-doc-base-registration
 I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:179
 I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:210
 I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:214
 I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:230
 I: tidy: possible-documentation-but-no-doc-base-registration
-I: tidy: unused-override spelling-error-in-binary
+N: At least one of these is a correct non-English word
+O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 ment meant
+N: At least one of these is a correct non-English word
+O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 langage language
+I: libtidy5: possible-documentation-but-no-doc-base-registration
 +++ end of lintian output +++
-I: user script /var/cache/pbuilder/build//21855/tmp/hooks/B90lintian finished
+I: user script /var/cache/pbuilder/build//18029/tmp/hooks/B90lintian finished
 I: Copying back the cached apt archive contents
 I: unmounting dev/pts filesystem
 I: unmounting proc filesystem
 I: cleaning the build env 
-I: removing directory /var/cache/pbuilder/build//21855 and its subdirectories
-I: Current time: Fri May 20 14:29:06 BST 2016
-I: pbuilder-time-stamp: 1463750946
+I: removing directory /var/cache/pbuilder/build//18029 and its subdirectories
+I: Current time: Fri May 20 15:05:11 BST 2016
+I: pbuilder-time-stamp: 1463753111

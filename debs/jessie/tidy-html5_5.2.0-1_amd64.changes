@@ -20,23 +20,23 @@ Changes:
    * debian/control: changed libtidy-0.99-0 to libtidy5
    * Update for modern packaging standards
 Checksums-Sha1:
- e22fe19f2749e951550d7da9ca274e4c07891844 970 tidy-html5_5.2.0-1.dsc
+ 432e71b02691cfe2d30b16d2a3d34d7cf3db336d 970 tidy-html5_5.2.0-1.dsc
  c1571eafa928390feee9e03445bf806127852288 529016 tidy-html5_5.2.0.orig.tar.gz
- 5d9527b8238a3eb9ce33323ce3703ac3e2846174 20548 tidy-html5_5.2.0-1.debian.tar.xz
- 3f7c5f93037d4c67b47f49755b44877abdfc81e1 42712 tidy_5.2.0-1_amd64.deb
- f7a482d099bb41199cda753cada05804f1bf47c4 175066 libtidy5_5.2.0-1_amd64.deb
- e7d009e451e7152b33b4fc5c5567cfd2cc262c9a 191984 libtidy-dev_5.2.0-1_amd64.deb
+ a69248fc919d897163787b15d2f1973c8a4c93c3 20536 tidy-html5_5.2.0-1.debian.tar.xz
+ cd261a395e0439a1af3463a382ae62165c423a61 42544 tidy_5.2.0-1_amd64.deb
+ dbc42b0c9c6e0c29e95f5a70e233e6d34e259278 175342 libtidy5_5.2.0-1_amd64.deb
+ e8239b4dea44a2c2340cabd80e9ff045c02fd589 191974 libtidy-dev_5.2.0-1_amd64.deb
 Checksums-Sha256:
- faa32ada783da2d6c101d330e6b35dacec03739ce5bef38f44b60c48fa94a788 970 tidy-html5_5.2.0-1.dsc
+ 7c246bbd813c0e5caf579250f24de5c463f74e1f64f4f730e3f412b57e52cbc3 970 tidy-html5_5.2.0-1.dsc
  80533415acf11ac55f24b874ab39448e390ffec3c2b93df4b857d15602fc7c4d 529016 tidy-html5_5.2.0.orig.tar.gz
- 82df1be9810ef56896f10c3f589f6ebd52c49810fcc21b4a137f720f53d224c1 20548 tidy-html5_5.2.0-1.debian.tar.xz
- c1dd6a0cdb02803c6eeea2157feb19946dc85a983dc4e978fc7c442976f4945c 42712 tidy_5.2.0-1_amd64.deb
- dcd966a588f49053504d237004a5486b9af3b17ea4be729e79d85ea0bfaf74d8 175066 libtidy5_5.2.0-1_amd64.deb
- 62776616ac6130ef68445aa760365fa8c617d7ae9350b6f4f323f61b33f67b24 191984 libtidy-dev_5.2.0-1_amd64.deb
+ 0908adce114a7a0488c5c7a8bad1bbba432ed947deaefd2ac375ea8c9070209d 20536 tidy-html5_5.2.0-1.debian.tar.xz
+ af94f9701e2ad84e8ea2e1d0f8781b11a550b35ae93b5939d9c79225ca69a3cd 42544 tidy_5.2.0-1_amd64.deb
+ 9aaabd505f76f31548eceb59ff4dca993ced40021ed878554a31791025dde7c6 175342 libtidy5_5.2.0-1_amd64.deb
+ 04977fa1c6607ead3ff35e609acf863d979dd3236fd37a631fa64c142f1d116d 191974 libtidy-dev_5.2.0-1_amd64.deb
 Files:
- aac482d25ca626ad296726447237627d 970 web optional tidy-html5_5.2.0-1.dsc
+ 927793ef23e660100ae2c545945d9043 970 web optional tidy-html5_5.2.0-1.dsc
  ffbe6e8471eff90877b4d74bb714e22f 529016 web optional tidy-html5_5.2.0.orig.tar.gz
- 5ed72dbb767a8998e22f041f0ca772e2 20548 web optional tidy-html5_5.2.0-1.debian.tar.xz
- 1d34578cdedbb62191dc7100c276394c 42712 web optional tidy_5.2.0-1_amd64.deb
- 1df682bca2d27a9b0211e5bc7d8e2cbd 175066 libs optional libtidy5_5.2.0-1_amd64.deb
- cc5b9674ef5fb93e8df770db189b1ad2 191984 libdevel optional libtidy-dev_5.2.0-1_amd64.deb
+ 95f0b54427146c733494bbd94362fa5f 20536 web optional tidy-html5_5.2.0-1.debian.tar.xz
+ 562b6ab977c5c0721a799d7e9d2a8cb1 42544 web optional tidy_5.2.0-1_amd64.deb
+ a754ff9acbbb56b039717d90a7a7df9a 175342 libs optional libtidy5_5.2.0-1_amd64.deb
+ 76dc6ecf87ea5eea56852f2c29b5f24d 191974 libdevel optional libtidy-dev_5.2.0-1_amd64.deb

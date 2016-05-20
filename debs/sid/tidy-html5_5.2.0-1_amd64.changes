@@ -20,29 +20,29 @@ Changes:
    * debian/control: changed libtidy-0.99-0 to libtidy5
    * Update for modern packaging standards
 Checksums-Sha1:
- e22fe19f2749e951550d7da9ca274e4c07891844 970 tidy-html5_5.2.0-1.dsc
+ 432e71b02691cfe2d30b16d2a3d34d7cf3db336d 970 tidy-html5_5.2.0-1.dsc
  c1571eafa928390feee9e03445bf806127852288 529016 tidy-html5_5.2.0.orig.tar.gz
- 5d9527b8238a3eb9ce33323ce3703ac3e2846174 20548 tidy-html5_5.2.0-1.debian.tar.xz
- a358f3ecce5aca50293d608386417b84071eb240 192212 libtidy-dev_5.2.0-1_amd64.deb
- 7617dc02a068798d06d9dc155a2d4d7af145c883 313634 libtidy5-dbgsym_5.2.0-1_amd64.deb
- a2b78a6a32030a3f9d5691cae0a994f819c4c0be 174498 libtidy5_5.2.0-1_amd64.deb
- 9d0d5c8c80a4deb89d52396d39e527afad639b35 29002 tidy-dbgsym_5.2.0-1_amd64.deb
- 88ef0762d9eaf43a629cc3414314e78d5c2f46e0 42330 tidy_5.2.0-1_amd64.deb
+ a69248fc919d897163787b15d2f1973c8a4c93c3 20536 tidy-html5_5.2.0-1.debian.tar.xz
+ 5eec5a5fcb769062f96d1bbd28401fbd30176129 192264 libtidy-dev_5.2.0-1_amd64.deb
+ 96841207f55d64dbed901a0e8d24b92e30ec7845 313622 libtidy5-dbgsym_5.2.0-1_amd64.deb
+ 6397771f309db6f0deabff7e5c3cd6dda9976981 174630 libtidy5_5.2.0-1_amd64.deb
+ c0ffe33fbfa1788b641dcc8541ea408237dec0f1 29004 tidy-dbgsym_5.2.0-1_amd64.deb
+ aeb20898f79e9ae5ae584dd9c26d6f1e8dbc6186 42180 tidy_5.2.0-1_amd64.deb
 Checksums-Sha256:
- faa32ada783da2d6c101d330e6b35dacec03739ce5bef38f44b60c48fa94a788 970 tidy-html5_5.2.0-1.dsc
+ 7c246bbd813c0e5caf579250f24de5c463f74e1f64f4f730e3f412b57e52cbc3 970 tidy-html5_5.2.0-1.dsc
  80533415acf11ac55f24b874ab39448e390ffec3c2b93df4b857d15602fc7c4d 529016 tidy-html5_5.2.0.orig.tar.gz
- 82df1be9810ef56896f10c3f589f6ebd52c49810fcc21b4a137f720f53d224c1 20548 tidy-html5_5.2.0-1.debian.tar.xz
- ed297b07ec1477033a2a3bbf2b57cacf2606766c227ce9fe1500aca69aacc485 192212 libtidy-dev_5.2.0-1_amd64.deb
- 5f4c1bd53422f27e738bbaffe630a055fb772cdc8f0a222ea846c3398d2fb9c9 313634 libtidy5-dbgsym_5.2.0-1_amd64.deb
- dda30fdcc8ae8259e3299f3b732a8471db1c744366905f288473e45a87109319 174498 libtidy5_5.2.0-1_amd64.deb
- 98664c324760b67af7664717ba83de19841cd3062638adcbf9dace32980409ac 29002 tidy-dbgsym_5.2.0-1_amd64.deb
- 3ff4a229b2fdec4a9ad6c426c1f3fd61c1c43196b234ff49863f35d781d0f213 42330 tidy_5.2.0-1_amd64.deb
+ 0908adce114a7a0488c5c7a8bad1bbba432ed947deaefd2ac375ea8c9070209d 20536 tidy-html5_5.2.0-1.debian.tar.xz
+ 86c6cbe9b14b2872b6fc205f8a6edf1962373506871b125dfa8403aad52bc428 192264 libtidy-dev_5.2.0-1_amd64.deb
+ df366a619404b0277e6412fec75bdf8ff606c3dec192bc5b19286f2fcf99878e 313622 libtidy5-dbgsym_5.2.0-1_amd64.deb
+ 5844c97c7979d8bf49a88b7a39af6604aa51a68984801034b2ad0ffc1e2ea28f 174630 libtidy5_5.2.0-1_amd64.deb
+ 42567ca215ab93601b664957a206423ae3a572e03051ca58ba8e1369fa71eb4c 29004 tidy-dbgsym_5.2.0-1_amd64.deb
+ 0fb2f35dda88a216d9de06f1648317c31905f6a7761ebf546582b7e06fc0c3ab 42180 tidy_5.2.0-1_amd64.deb
 Files:
- aac482d25ca626ad296726447237627d 970 web optional tidy-html5_5.2.0-1.dsc
+ 927793ef23e660100ae2c545945d9043 970 web optional tidy-html5_5.2.0-1.dsc
  ffbe6e8471eff90877b4d74bb714e22f 529016 web optional tidy-html5_5.2.0.orig.tar.gz
- 5ed72dbb767a8998e22f041f0ca772e2 20548 web optional tidy-html5_5.2.0-1.debian.tar.xz
- 4a80385a670428ae7c77058dc39a6486 192212 libdevel optional libtidy-dev_5.2.0-1_amd64.deb
- 524fc0db320f9855273a4278e5c3d065 313634 debug extra libtidy5-dbgsym_5.2.0-1_amd64.deb
- b715363bf3c85c043656a3f2472dde38 174498 libs optional libtidy5_5.2.0-1_amd64.deb
- 4ccfe2bd3b3c5460b23ec4b957e84cb4 29002 debug extra tidy-dbgsym_5.2.0-1_amd64.deb
- 6158e8c8a119131694ff98b6fee24792 42330 web optional tidy_5.2.0-1_amd64.deb
+ 95f0b54427146c733494bbd94362fa5f 20536 web optional tidy-html5_5.2.0-1.debian.tar.xz
+ b5efb3252815d8c443fba38eed5ae063 192264 libdevel optional libtidy-dev_5.2.0-1_amd64.deb
+ 2ccaaa9f83f4fd4d319eadea2a6bd865 313622 debug extra libtidy5-dbgsym_5.2.0-1_amd64.deb
+ 518d84e82f2b95aecf9bfe54f254fb21 174630 libs optional libtidy5_5.2.0-1_amd64.deb
+ 1746669508e9a468b541ce077891da2f 29004 debug extra tidy-dbgsym_5.2.0-1_amd64.deb
+ d74c99dcc88ab1c876ff975fbc338507 42180 web optional tidy_5.2.0-1_amd64.deb
