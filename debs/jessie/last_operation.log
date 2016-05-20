@@ -1,6 +1,6 @@
 I: using fakeroot in build.
-I: Current time: Tue May 17 15:07:28 BST 2016
-I: pbuilder-time-stamp: 1463494048
+I: Current time: Fri May 20 14:24:24 BST 2016
+I: pbuilder-time-stamp: 1463750664
 I: Building the build Environment
 I: extracting base tarball [/home/daniel/pbuilder/jessie-base.tgz]
 I: creating local configuration
@@ -21,7 +21,7 @@ Maintainer: Debian Pbuilder Team <pbuilder-maint@lists.alioth.debian.org>
 Description: Dummy package to satisfy dependencies with aptitude - created by pbuilder
  This package was created automatically by pbuilder to satisfy the
  build-dependencies of the package being currently built.
-Depends: debhelper (>= 9), libtool, perl, xsltproc, dh-autoreconf, cmake
+Depends: debhelper (>= 9), libtool, xsltproc, dh-autoreconf, cmake
 dpkg-deb: building package `pbuilder-satisfydepends-dummy' in `/tmp/satisfydepends-aptitude/pbuilder-satisfydepends-dummy.deb'.
 Selecting previously unselected package pbuilder-satisfydepends-dummy.
 (Reading database ... 12042 files and directories currently installed.)
@@ -62,7 +62,7 @@ The following NEW packages will be installed:
 Need to get 30.8 kB/18.7 MB of archives. After unpacking 61.3 MB will be used.
 Writing extended state information...
 Get: 1 http://ftp.debian.org/debian/ jessie/main intltool-debian all 0.35.0+20060710.1 [30.8 kB]
-Fetched 30.8 kB in 0s (366 kB/s)
+Fetched 30.8 kB in 0s (365 kB/s)
 debconf: delaying package configuration, since apt-utils is not installed
 Selecting previously unselected package libpipeline1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 12042 files and directories currently installed.)
@@ -335,7 +335,9 @@ make: 'build' is up to date.
  fakeroot debian/rules binary
 dh  binary
    dh_testdir
-   dh_auto_configure
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/tmp/buildd/tidy-html5-5.2.0'
+dh_auto_configure -- -DTIDY_CONSOLE_SHARED:BOOL=YES
 -- The C compiler identification is GNU 4.9.2
 -- The CXX compiler identification is GNU 4.9.2
 -- Check for working C compiler: /usr/bin/cc
@@ -351,105 +353,105 @@ dh  binary
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu
+make[1]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0'
    dh_auto_build
 make[1]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 /usr/bin/cmake -H/tmp/buildd/tidy-html5-5.2.0 -B/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu --check-build-system CMakeFiles/Makefile.cmake 0
 /usr/bin/cmake -E cmake_progress_start /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/progress.marks
 make -f CMakeFiles/Makefile2 all
 make[2]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-make -f CMakeFiles/tidy-static.dir/build.make CMakeFiles/tidy-static.dir/depend
+make -f CMakeFiles/tidy-share.dir/build.make CMakeFiles/tidy-share.dir/depend
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy-static.dir/DependInfo.cmake --color=
-Scanning dependencies of target tidy-static
+cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy-share.dir/DependInfo.cmake --color=
+Scanning dependencies of target tidy-share
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-make -f CMakeFiles/tidy-static.dir/build.make CMakeFiles/tidy-static.dir/build
+make -f CMakeFiles/tidy-share.dir/build.make CMakeFiles/tidy-share.dir/build
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 28
-[  1%] Building C object CMakeFiles/tidy-static.dir/src/access.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/access.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/access.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 29
-[  3%] Building C object CMakeFiles/tidy-static.dir/src/attrs.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/attrs.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrs.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 30
-[  5%] Building C object CMakeFiles/tidy-static.dir/src/istack.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/istack.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/istack.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 31
-[  7%] Building C object CMakeFiles/tidy-static.dir/src/parser.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/parser.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/parser.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 32
-[  9%] Building C object CMakeFiles/tidy-static.dir/src/tags.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/tags.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tags.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 33
-[ 11%] Building C object CMakeFiles/tidy-static.dir/src/entities.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/entities.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/entities.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 34
-[ 13%] Building C object CMakeFiles/tidy-static.dir/src/lexer.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/lexer.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/lexer.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 35
-[ 15%] Building C object CMakeFiles/tidy-static.dir/src/pprint.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/pprint.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/pprint.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 36
-[ 16%] Building C object CMakeFiles/tidy-static.dir/src/charsets.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/charsets.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/charsets.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 37
-[ 18%] Building C object CMakeFiles/tidy-static.dir/src/clean.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/clean.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/clean.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 38
-[ 20%] Building C object CMakeFiles/tidy-static.dir/src/message.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/message.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/message.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 39
-[ 22%] Building C object CMakeFiles/tidy-static.dir/src/config.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/config.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/config.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 40
-[ 24%] Building C object CMakeFiles/tidy-static.dir/src/alloc.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/alloc.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/alloc.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 41
-[ 26%] Building C object CMakeFiles/tidy-static.dir/src/attrask.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/attrask.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrask.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 42
-[ 28%] Building C object CMakeFiles/tidy-static.dir/src/attrdict.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/attrdict.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrdict.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 43
-[ 30%] Building C object CMakeFiles/tidy-static.dir/src/attrget.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/attrget.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrget.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 44
-[ 32%] Building C object CMakeFiles/tidy-static.dir/src/buffio.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/buffio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/buffio.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 45
-[ 33%] Building C object CMakeFiles/tidy-static.dir/src/fileio.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/fileio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/fileio.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 46
-[ 35%] Building C object CMakeFiles/tidy-static.dir/src/streamio.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/streamio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/streamio.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 47
-[ 37%] Building C object CMakeFiles/tidy-static.dir/src/tagask.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/tagask.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tagask.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 48
-[ 39%] Building C object CMakeFiles/tidy-static.dir/src/tmbstr.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/tmbstr.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tmbstr.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 49
-[ 41%] Building C object CMakeFiles/tidy-static.dir/src/utf8.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/utf8.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/utf8.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 50
-[ 43%] Building C object CMakeFiles/tidy-static.dir/src/tidylib.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/tidylib.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tidylib.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 51
-[ 45%] Building C object CMakeFiles/tidy-static.dir/src/mappedio.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/mappedio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/mappedio.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 52
-[ 47%] Building C object CMakeFiles/tidy-static.dir/src/gdoc.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/gdoc.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/gdoc.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 53
-[ 49%] Building C object CMakeFiles/tidy-static.dir/src/language.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/language.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/language.c
-Linking C static library libtidys.a
-/usr/bin/cmake -P CMakeFiles/tidy-static.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/tidy-static.dir/link.txt --verbose=1
-/usr/bin/ar cr libtidys.a  CMakeFiles/tidy-static.dir/src/access.c.o CMakeFiles/tidy-static.dir/src/attrs.c.o CMakeFiles/tidy-static.dir/src/istack.c.o CMakeFiles/tidy-static.dir/src/parser.c.o CMakeFiles/tidy-static.dir/src/tags.c.o CMakeFiles/tidy-static.dir/src/entities.c.o CMakeFiles/tidy-static.dir/src/lexer.c.o CMakeFiles/tidy-static.dir/src/pprint.c.o CMakeFiles/tidy-static.dir/src/charsets.c.o CMakeFiles/tidy-static.dir/src/clean.c.o CMakeFiles/tidy-static.dir/src/message.c.o CMakeFiles/tidy-static.dir/src/config.c.o CMakeFiles/tidy-static.dir/src/alloc.c.o CMakeFiles/tidy-static.dir/src/attrask.c.o CMakeFiles/tidy-static.dir/src/attrdict.c.o CMakeFiles/tidy-static.dir/src/attrget.c.o CMakeFiles/tidy-static.dir/src/buffio.c.o CMakeFiles/tidy-static.dir/src/fileio.c.o CMakeFiles/tidy-static.dir/src/streamio.c.o CMakeFiles/tidy-static.dir/src/tagask.c.o CMakeFiles/tidy-static.dir/src/tmbstr.c.o CMakeFiles/tidy-static.dir/src/utf8.c.o CMakeFiles/tidy-static.dir/src/tidylib.c.o CMakeFiles/tidy-static.dir/src/mappedio.c.o CMakeFiles/tidy-static.dir/src/gdoc.c.o CMakeFiles/tidy-static.dir/src/language.c.o
-/usr/bin/ranlib libtidys.a
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 2
+[  1%] Building C object CMakeFiles/tidy-share.dir/src/access.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/access.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/access.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 3
+[  3%] Building C object CMakeFiles/tidy-share.dir/src/attrs.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/attrs.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrs.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 4
+[  5%] Building C object CMakeFiles/tidy-share.dir/src/istack.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/istack.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/istack.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 5
+[  7%] Building C object CMakeFiles/tidy-share.dir/src/parser.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/parser.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/parser.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 6
+[  9%] Building C object CMakeFiles/tidy-share.dir/src/tags.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/tags.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tags.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 7
+[ 11%] Building C object CMakeFiles/tidy-share.dir/src/entities.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/entities.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/entities.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 8
+[ 13%] Building C object CMakeFiles/tidy-share.dir/src/lexer.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/lexer.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/lexer.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 9
+[ 15%] Building C object CMakeFiles/tidy-share.dir/src/pprint.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/pprint.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/pprint.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 10
+[ 16%] Building C object CMakeFiles/tidy-share.dir/src/charsets.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/charsets.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/charsets.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 11
+[ 18%] Building C object CMakeFiles/tidy-share.dir/src/clean.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/clean.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/clean.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 12
+[ 20%] Building C object CMakeFiles/tidy-share.dir/src/message.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/message.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/message.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 13
+[ 22%] Building C object CMakeFiles/tidy-share.dir/src/config.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/config.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/config.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 14
+[ 24%] Building C object CMakeFiles/tidy-share.dir/src/alloc.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/alloc.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/alloc.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 15
+[ 26%] Building C object CMakeFiles/tidy-share.dir/src/attrask.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/attrask.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrask.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 16
+[ 28%] Building C object CMakeFiles/tidy-share.dir/src/attrdict.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/attrdict.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrdict.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 17
+[ 30%] Building C object CMakeFiles/tidy-share.dir/src/attrget.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/attrget.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrget.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 18
+[ 32%] Building C object CMakeFiles/tidy-share.dir/src/buffio.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/buffio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/buffio.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 19
+[ 33%] Building C object CMakeFiles/tidy-share.dir/src/fileio.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/fileio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/fileio.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 20
+[ 35%] Building C object CMakeFiles/tidy-share.dir/src/streamio.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/streamio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/streamio.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 21
+[ 37%] Building C object CMakeFiles/tidy-share.dir/src/tagask.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/tagask.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tagask.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 22
+[ 39%] Building C object CMakeFiles/tidy-share.dir/src/tmbstr.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/tmbstr.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tmbstr.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 23
+[ 41%] Building C object CMakeFiles/tidy-share.dir/src/utf8.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/utf8.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/utf8.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 24
+[ 43%] Building C object CMakeFiles/tidy-share.dir/src/tidylib.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/tidylib.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tidylib.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 25
+[ 45%] Building C object CMakeFiles/tidy-share.dir/src/mappedio.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/mappedio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/mappedio.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 26
+[ 47%] Building C object CMakeFiles/tidy-share.dir/src/gdoc.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/gdoc.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/gdoc.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 27
+[ 49%] Building C object CMakeFiles/tidy-share.dir/src/language.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/language.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/language.c
+Linking C shared library libtidy.so
+/usr/bin/cmake -E cmake_link_script CMakeFiles/tidy-share.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT  -fPIE -pie -Wl,-z,relro -Wl,-z,now -shared -Wl,-soname,libtidy.so.5 -o libtidy.so.5.2.0 CMakeFiles/tidy-share.dir/src/access.c.o CMakeFiles/tidy-share.dir/src/attrs.c.o CMakeFiles/tidy-share.dir/src/istack.c.o CMakeFiles/tidy-share.dir/src/parser.c.o CMakeFiles/tidy-share.dir/src/tags.c.o CMakeFiles/tidy-share.dir/src/entities.c.o CMakeFiles/tidy-share.dir/src/lexer.c.o CMakeFiles/tidy-share.dir/src/pprint.c.o CMakeFiles/tidy-share.dir/src/charsets.c.o CMakeFiles/tidy-share.dir/src/clean.c.o CMakeFiles/tidy-share.dir/src/message.c.o CMakeFiles/tidy-share.dir/src/config.c.o CMakeFiles/tidy-share.dir/src/alloc.c.o CMakeFiles/tidy-share.dir/src/attrask.c.o CMakeFiles/tidy-share.dir/src/attrdict.c.o CMakeFiles/tidy-share.dir/src/attrget.c.o CMakeFiles/tidy-share.dir/src/buffio.c.o CMakeFiles/tidy-share.dir/src/fileio.c.o CMakeFiles/tidy-share.dir/src/streamio.c.o CMakeFiles/tidy-share.dir/src/tagask.c.o CMakeFiles/tidy-share.dir/src/tmbstr.c.o CMakeFiles/tidy-share.dir/src/utf8.c.o CMakeFiles/tidy-share.dir/src/tidylib.c.o CMakeFiles/tidy-share.dir/src/mappedio.c.o CMakeFiles/tidy-share.dir/src/gdoc.c.o CMakeFiles/tidy-share.dir/src/language.c.o 
+/usr/bin/cmake -E cmake_symlink_library libtidy.so.5.2.0 libtidy.so.5 libtidy.so
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles  28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53
-[ 49%] Built target tidy-static
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles  2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+[ 49%] Built target tidy-share
 make -f CMakeFiles/tidy.dir/build.make CMakeFiles/tidy.dir/depend
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy.dir/DependInfo.cmake --color=
@@ -459,10 +461,10 @@ make -f CMakeFiles/tidy.dir/build.make CMakeFiles/tidy.dir/build
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 /usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 1
 [ 50%] Building C object CMakeFiles/tidy.dir/console/tidy.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DTIDY_STATIC -o CMakeFiles/tidy.dir/console/tidy.c.o   -c /tmp/buildd/tidy-html5-5.2.0/console/tidy.c
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy.dir/console/tidy.c.o   -c /tmp/buildd/tidy-html5-5.2.0/console/tidy.c
 Linking C executable tidy
 /usr/bin/cmake -E cmake_link_script CMakeFiles/tidy.dir/link.txt --verbose=1
-/usr/bin/cc  -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT   -fPIE -pie -Wl,-z,relro -Wl,-z,now  CMakeFiles/tidy.dir/console/tidy.c.o  -o tidy -rdynamic libtidys.a 
+/usr/bin/cc  -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT   -fPIE -pie -Wl,-z,relro -Wl,-z,now  CMakeFiles/tidy.dir/console/tidy.c.o  -o tidy -rdynamic libtidy.so.5.2.0 -Wl,-rpath,/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu: 
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 /usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles  1
 [ 50%] Built target tidy
@@ -482,98 +484,99 @@ xsltproc /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/tidy1.xsl /tmp/buildd
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 /usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 
 [ 50%] Built target man
-make -f CMakeFiles/tidy-share.dir/build.make CMakeFiles/tidy-share.dir/depend
+make -f CMakeFiles/tidy-static.dir/build.make CMakeFiles/tidy-static.dir/depend
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy-share.dir/DependInfo.cmake --color=
-Scanning dependencies of target tidy-share
+cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy-static.dir/DependInfo.cmake --color=
+Scanning dependencies of target tidy-static
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-make -f CMakeFiles/tidy-share.dir/build.make CMakeFiles/tidy-share.dir/build
+make -f CMakeFiles/tidy-static.dir/build.make CMakeFiles/tidy-static.dir/build
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 2
-[ 52%] Building C object CMakeFiles/tidy-share.dir/src/access.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/access.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/access.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 3
-[ 54%] Building C object CMakeFiles/tidy-share.dir/src/attrs.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/attrs.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrs.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 4
-[ 56%] Building C object CMakeFiles/tidy-share.dir/src/istack.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/istack.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/istack.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 5
-[ 58%] Building C object CMakeFiles/tidy-share.dir/src/parser.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/parser.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/parser.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 6
-[ 60%] Building C object CMakeFiles/tidy-share.dir/src/tags.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/tags.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tags.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 7
-[ 62%] Building C object CMakeFiles/tidy-share.dir/src/entities.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/entities.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/entities.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 8
-[ 64%] Building C object CMakeFiles/tidy-share.dir/src/lexer.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/lexer.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/lexer.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 9
-[ 66%] Building C object CMakeFiles/tidy-share.dir/src/pprint.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/pprint.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/pprint.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 10
-[ 67%] Building C object CMakeFiles/tidy-share.dir/src/charsets.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/charsets.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/charsets.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 11
-[ 69%] Building C object CMakeFiles/tidy-share.dir/src/clean.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/clean.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/clean.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 12
-[ 71%] Building C object CMakeFiles/tidy-share.dir/src/message.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/message.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/message.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 13
-[ 73%] Building C object CMakeFiles/tidy-share.dir/src/config.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/config.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/config.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 14
-[ 75%] Building C object CMakeFiles/tidy-share.dir/src/alloc.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/alloc.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/alloc.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 15
-[ 77%] Building C object CMakeFiles/tidy-share.dir/src/attrask.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/attrask.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrask.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 16
-[ 79%] Building C object CMakeFiles/tidy-share.dir/src/attrdict.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/attrdict.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrdict.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 17
-[ 81%] Building C object CMakeFiles/tidy-share.dir/src/attrget.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/attrget.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrget.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 18
-[ 83%] Building C object CMakeFiles/tidy-share.dir/src/buffio.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/buffio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/buffio.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 19
-[ 84%] Building C object CMakeFiles/tidy-share.dir/src/fileio.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/fileio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/fileio.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 20
-[ 86%] Building C object CMakeFiles/tidy-share.dir/src/streamio.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/streamio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/streamio.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 21
-[ 88%] Building C object CMakeFiles/tidy-share.dir/src/tagask.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/tagask.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tagask.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 22
-[ 90%] Building C object CMakeFiles/tidy-share.dir/src/tmbstr.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/tmbstr.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tmbstr.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 23
-[ 92%] Building C object CMakeFiles/tidy-share.dir/src/utf8.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/utf8.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/utf8.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 24
-[ 94%] Building C object CMakeFiles/tidy-share.dir/src/tidylib.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/tidylib.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tidylib.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 25
-[ 96%] Building C object CMakeFiles/tidy-share.dir/src/mappedio.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/mappedio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/mappedio.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 26
-[ 98%] Building C object CMakeFiles/tidy-share.dir/src/gdoc.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/gdoc.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/gdoc.c
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 27
-[100%] Building C object CMakeFiles/tidy-share.dir/src/language.c.o
-/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -Dtidy_share_EXPORTS -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -fPIC -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -DBUILDING_SHARED_LIB -o CMakeFiles/tidy-share.dir/src/language.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/language.c
-Linking C shared library libtidy.so
-/usr/bin/cmake -E cmake_link_script CMakeFiles/tidy-share.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT  -fPIE -pie -Wl,-z,relro -Wl,-z,now -shared -Wl,-soname,libtidy.so.5 -o libtidy.so.5.2.0 CMakeFiles/tidy-share.dir/src/access.c.o CMakeFiles/tidy-share.dir/src/attrs.c.o CMakeFiles/tidy-share.dir/src/istack.c.o CMakeFiles/tidy-share.dir/src/parser.c.o CMakeFiles/tidy-share.dir/src/tags.c.o CMakeFiles/tidy-share.dir/src/entities.c.o CMakeFiles/tidy-share.dir/src/lexer.c.o CMakeFiles/tidy-share.dir/src/pprint.c.o CMakeFiles/tidy-share.dir/src/charsets.c.o CMakeFiles/tidy-share.dir/src/clean.c.o CMakeFiles/tidy-share.dir/src/message.c.o CMakeFiles/tidy-share.dir/src/config.c.o CMakeFiles/tidy-share.dir/src/alloc.c.o CMakeFiles/tidy-share.dir/src/attrask.c.o CMakeFiles/tidy-share.dir/src/attrdict.c.o CMakeFiles/tidy-share.dir/src/attrget.c.o CMakeFiles/tidy-share.dir/src/buffio.c.o CMakeFiles/tidy-share.dir/src/fileio.c.o CMakeFiles/tidy-share.dir/src/streamio.c.o CMakeFiles/tidy-share.dir/src/tagask.c.o CMakeFiles/tidy-share.dir/src/tmbstr.c.o CMakeFiles/tidy-share.dir/src/utf8.c.o CMakeFiles/tidy-share.dir/src/tidylib.c.o CMakeFiles/tidy-share.dir/src/mappedio.c.o CMakeFiles/tidy-share.dir/src/gdoc.c.o CMakeFiles/tidy-share.dir/src/language.c.o 
-/usr/bin/cmake -E cmake_symlink_library libtidy.so.5.2.0 libtidy.so.5 libtidy.so
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 28
+[ 52%] Building C object CMakeFiles/tidy-static.dir/src/access.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/access.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/access.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 29
+[ 54%] Building C object CMakeFiles/tidy-static.dir/src/attrs.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/attrs.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrs.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 30
+[ 56%] Building C object CMakeFiles/tidy-static.dir/src/istack.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/istack.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/istack.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 31
+[ 58%] Building C object CMakeFiles/tidy-static.dir/src/parser.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/parser.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/parser.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 32
+[ 60%] Building C object CMakeFiles/tidy-static.dir/src/tags.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/tags.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tags.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 33
+[ 62%] Building C object CMakeFiles/tidy-static.dir/src/entities.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/entities.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/entities.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 34
+[ 64%] Building C object CMakeFiles/tidy-static.dir/src/lexer.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/lexer.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/lexer.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 35
+[ 66%] Building C object CMakeFiles/tidy-static.dir/src/pprint.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/pprint.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/pprint.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 36
+[ 67%] Building C object CMakeFiles/tidy-static.dir/src/charsets.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/charsets.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/charsets.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 37
+[ 69%] Building C object CMakeFiles/tidy-static.dir/src/clean.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/clean.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/clean.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 38
+[ 71%] Building C object CMakeFiles/tidy-static.dir/src/message.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/message.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/message.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 39
+[ 73%] Building C object CMakeFiles/tidy-static.dir/src/config.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/config.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/config.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 40
+[ 75%] Building C object CMakeFiles/tidy-static.dir/src/alloc.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/alloc.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/alloc.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 41
+[ 77%] Building C object CMakeFiles/tidy-static.dir/src/attrask.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/attrask.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrask.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 42
+[ 79%] Building C object CMakeFiles/tidy-static.dir/src/attrdict.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/attrdict.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrdict.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 43
+[ 81%] Building C object CMakeFiles/tidy-static.dir/src/attrget.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/attrget.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/attrget.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 44
+[ 83%] Building C object CMakeFiles/tidy-static.dir/src/buffio.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/buffio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/buffio.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 45
+[ 84%] Building C object CMakeFiles/tidy-static.dir/src/fileio.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/fileio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/fileio.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 46
+[ 86%] Building C object CMakeFiles/tidy-static.dir/src/streamio.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/streamio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/streamio.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 47
+[ 88%] Building C object CMakeFiles/tidy-static.dir/src/tagask.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/tagask.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tagask.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 48
+[ 90%] Building C object CMakeFiles/tidy-static.dir/src/tmbstr.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/tmbstr.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tmbstr.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 49
+[ 92%] Building C object CMakeFiles/tidy-static.dir/src/utf8.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/utf8.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/utf8.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 50
+[ 94%] Building C object CMakeFiles/tidy-static.dir/src/tidylib.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/tidylib.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/tidylib.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 51
+[ 96%] Building C object CMakeFiles/tidy-static.dir/src/mappedio.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/mappedio.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/mappedio.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 52
+[ 98%] Building C object CMakeFiles/tidy-static.dir/src/gdoc.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/gdoc.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/gdoc.c
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 53
+[100%] Building C object CMakeFiles/tidy-static.dir/src/language.c.o
+/usr/bin/cc  -DHAVE_CONFIG_H -DLIBTIDY_VERSION=\"5.2.0\" -DRELEASE_DATE=\"2016/04/07\" -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_LOCALIZATIONS=1 -DSUPPORT_UTF16_ENCODINGS=1 -g -O2 -fPIE -fstack-protector-strong -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -Wall  -D_REENTRANT -I/tmp/buildd/tidy-html5-5.2.0/include -I/tmp/buildd/tidy-html5-5.2.0/src    -o CMakeFiles/tidy-static.dir/src/language.c.o   -c /tmp/buildd/tidy-html5-5.2.0/src/language.c
+Linking C static library libtidys.a
+/usr/bin/cmake -P CMakeFiles/tidy-static.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/tidy-static.dir/link.txt --verbose=1
+/usr/bin/ar cr libtidys.a  CMakeFiles/tidy-static.dir/src/access.c.o CMakeFiles/tidy-static.dir/src/attrs.c.o CMakeFiles/tidy-static.dir/src/istack.c.o CMakeFiles/tidy-static.dir/src/parser.c.o CMakeFiles/tidy-static.dir/src/tags.c.o CMakeFiles/tidy-static.dir/src/entities.c.o CMakeFiles/tidy-static.dir/src/lexer.c.o CMakeFiles/tidy-static.dir/src/pprint.c.o CMakeFiles/tidy-static.dir/src/charsets.c.o CMakeFiles/tidy-static.dir/src/clean.c.o CMakeFiles/tidy-static.dir/src/message.c.o CMakeFiles/tidy-static.dir/src/config.c.o CMakeFiles/tidy-static.dir/src/alloc.c.o CMakeFiles/tidy-static.dir/src/attrask.c.o CMakeFiles/tidy-static.dir/src/attrdict.c.o CMakeFiles/tidy-static.dir/src/attrget.c.o CMakeFiles/tidy-static.dir/src/buffio.c.o CMakeFiles/tidy-static.dir/src/fileio.c.o CMakeFiles/tidy-static.dir/src/streamio.c.o CMakeFiles/tidy-static.dir/src/tagask.c.o CMakeFiles/tidy-static.dir/src/tmbstr.c.o CMakeFiles/tidy-static.dir/src/utf8.c.o CMakeFiles/tidy-static.dir/src/tidylib.c.o CMakeFiles/tidy-static.dir/src/mappedio.c.o CMakeFiles/tidy-static.dir/src/gdoc.c.o CMakeFiles/tidy-static.dir/src/language.c.o
+/usr/bin/ranlib libtidys.a
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles  2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
-[100%] Built target tidy-share
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles  28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53
+[100%] Built target tidy-static
 make[2]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 /usr/bin/cmake -E cmake_progress_start /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 0
 make[1]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
@@ -586,16 +589,16 @@ make[1]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 /usr/bin/cmake -E cmake_progress_start /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/progress.marks
 make -f CMakeFiles/Makefile2 all
 make[2]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-make -f CMakeFiles/tidy-static.dir/build.make CMakeFiles/tidy-static.dir/depend
+make -f CMakeFiles/tidy-share.dir/build.make CMakeFiles/tidy-share.dir/depend
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy-static.dir/DependInfo.cmake --color=
+cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy-share.dir/DependInfo.cmake --color=
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-make -f CMakeFiles/tidy-static.dir/build.make CMakeFiles/tidy-static.dir/build
+make -f CMakeFiles/tidy-share.dir/build.make CMakeFiles/tidy-share.dir/build
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-make[3]: Nothing to be done for 'CMakeFiles/tidy-static.dir/build'.
+make[3]: Nothing to be done for 'CMakeFiles/tidy-share.dir/build'.
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles  28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53
-[ 49%] Built target tidy-static
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles  2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+[ 49%] Built target tidy-share
 make -f CMakeFiles/tidy.dir/build.make CMakeFiles/tidy.dir/depend
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy.dir/DependInfo.cmake --color=
@@ -621,16 +624,16 @@ xsltproc /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/tidy1.xsl /tmp/buildd
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 /usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 
 [ 50%] Built target man
-make -f CMakeFiles/tidy-share.dir/build.make CMakeFiles/tidy-share.dir/depend
+make -f CMakeFiles/tidy-static.dir/build.make CMakeFiles/tidy-static.dir/depend
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy-share.dir/DependInfo.cmake --color=
+cd /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0 /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles/tidy-static.dir/DependInfo.cmake --color=
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-make -f CMakeFiles/tidy-share.dir/build.make CMakeFiles/tidy-share.dir/build
+make -f CMakeFiles/tidy-static.dir/build.make CMakeFiles/tidy-static.dir/build
 make[3]: Entering directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-make[3]: Nothing to be done for 'CMakeFiles/tidy-share.dir/build'.
+make[3]: Nothing to be done for 'CMakeFiles/tidy-static.dir/build'.
 make[3]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
-/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles  2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
-[100%] Built target tidy-share
+/usr/bin/cmake -E cmake_progress_report /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles  28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53
+[100%] Built target tidy-static
 make[2]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
 /usr/bin/cmake -E cmake_progress_start /tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu/CMakeFiles 0
 make -f CMakeFiles/Makefile2 preinstall
@@ -649,6 +652,7 @@ Install the project...
 -- Installing: /tmp/buildd/tidy-html5-5.2.0/debian/tmp/usr/lib/libtidy.so.5
 -- Installing: /tmp/buildd/tidy-html5-5.2.0/debian/tmp/usr/lib/libtidy.so
 -- Installing: /tmp/buildd/tidy-html5-5.2.0/debian/tmp/usr/bin/tidy
+-- Removed runtime path from "/tmp/buildd/tidy-html5-5.2.0/debian/tmp/usr/bin/tidy"
 -- Installing: /tmp/buildd/tidy-html5-5.2.0/debian/tmp/usr/share/man/man1/tidy.1
 make[1]: Leaving directory '/tmp/buildd/tidy-html5-5.2.0/obj-x86_64-linux-gnu'
    dh_install
@@ -677,7 +681,7 @@ dpkg-deb: building package `libtidy-dev' in `../libtidy-dev_5.2.0-1_amd64.deb'.
 dpkg-genchanges: including full source code in upload
  dpkg-source --after-build tidy-html5-5.2.0
 dpkg-buildpackage: full upload (original source is included)
-I: user script /var/cache/pbuilder/build//1178/tmp/hooks/B90lintian starting
+I: user script /var/cache/pbuilder/build//21855/tmp/hooks/B90lintian starting
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -834,27 +838,24 @@ Setting up t1utils (1.38-4) ...
 Setting up lintian (2.5.30+deb8u4) ...
 +++ lintian output +++
 W: tidy-html5 source: newer-standards-version 3.9.8 (current is 3.9.6)
-N: At least one of these is a correct non-English word
-O: tidy: spelling-error-in-binary usr/bin/tidy ment meant
-N: At least one of these is a correct non-English word
-O: tidy: spelling-error-in-binary usr/bin/tidy langage language
-I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:179
-I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:210
-I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:214
-I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:230
-I: tidy: possible-documentation-but-no-doc-base-registration
 I: libtidy-dev: possible-documentation-but-no-doc-base-registration
 N: At least one of these is a correct non-English word
 O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 ment meant
 N: At least one of these is a correct non-English word
 O: libtidy5: spelling-error-in-binary usr/lib/libtidy.so.5.2.0 langage language
 I: libtidy5: possible-documentation-but-no-doc-base-registration
+I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:179
+I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:210
+I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:214
+I: tidy: hyphen-used-as-minus-sign usr/share/man/man1/tidy.1.gz:230
+I: tidy: possible-documentation-but-no-doc-base-registration
+I: tidy: unused-override spelling-error-in-binary
 +++ end of lintian output +++
-I: user script /var/cache/pbuilder/build//1178/tmp/hooks/B90lintian finished
+I: user script /var/cache/pbuilder/build//21855/tmp/hooks/B90lintian finished
 I: Copying back the cached apt archive contents
 I: unmounting dev/pts filesystem
 I: unmounting proc filesystem
 I: cleaning the build env 
-I: removing directory /var/cache/pbuilder/build//1178 and its subdirectories
-I: Current time: Tue May 17 15:12:06 BST 2016
-I: pbuilder-time-stamp: 1463494326
+I: removing directory /var/cache/pbuilder/build//21855 and its subdirectories
+I: Current time: Fri May 20 14:29:06 BST 2016
+I: pbuilder-time-stamp: 1463750946
