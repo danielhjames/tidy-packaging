@@ -1,3 +1,4 @@
 README/RELEASE.html /usr/share/doc/libtidy-dev/
-debian/tmp/usr/include/* usr/include/tidy
-debian/tmp/usr/lib/libtidy.so
+usr/include/* usr/include/tidy
+usr/lib/libtidy.so
+usr/lib/libtidys.a
